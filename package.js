@@ -1,8 +1,12 @@
 Package.describe({
   name: 'goldenpassport:server-render',
-  version: '0.3.1',
+  version: '0.3.2',
   summary: 'Generic support for server-side rendering in Meteor apps',
-  documentation: 'README.md'
+  documentation: 'README.md',
+  repository: {
+    type: 'git',
+    url: 'https://github.com/GoldenPassport/meteor-server-render'
+  }
 });
 
 Npm.depends({
@@ -10,7 +14,7 @@ Npm.depends({
 });
 
 Package.onUse((pApi) => {
-  pApi.use(['ecmascript', 'webapp']);
+  pApi.use(['ecmascript@0.11.1', 'webapp@1.6.2']);
   pApi.mainModule('client.js', 'client');
   pApi.mainModule('server.js', 'server');
 });
